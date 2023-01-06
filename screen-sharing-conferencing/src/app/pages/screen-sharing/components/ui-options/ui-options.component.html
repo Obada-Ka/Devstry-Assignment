@@ -1,0 +1,16 @@
+<ng-container *ngIf="!mobileFlag && mode =='VNC' then defaultButtons">
+    
+</ng-container>
+
+<ng-container *ngIf="mode =='WebRTC'">
+    <button class="btn btn-primary m-3" (click)="selectScreen()">Select Screen</button>
+</ng-container>
+
+<ng-template #defaultButtons>
+    
+    <button class="btn btn-primary m-3" (click)="selectScreen()">Select Screen</button>
+    <button class="btn btn-primary m-3" (click)="selectWindow()">Select Window</button>
+    
+</ng-template>
+
+
